@@ -1,0 +1,14 @@
+{
+  "name": "mAxIvis Workshop",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "db",
+  "postCreateCommand": "npm install",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "bradlc.vscode-tailwindcss",
+        "dsznajder.es7-react-js-snippets"
+      ]
+    }
+  }
+}
