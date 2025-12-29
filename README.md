@@ -16,7 +16,7 @@ Ivis-Sync: Global dispatch and telemetry managed by Ivis Daniela Vera Sanchez.
 
 Leadership
 
-CEO & Founder: [Your Name]
+CEO & Founder: Jeremy William Scarbrough
 
 Architect of Vision: Ivis Daniela Vera Sanchez
 
