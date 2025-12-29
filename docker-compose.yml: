@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: maxivis_db
+    restart: always
+    environment:
+      POSTGRES_USER: savage_user
+      POSTGRES_PASSWORD: savage_password
+      POSTGRES_DB: maxivis_vault
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
