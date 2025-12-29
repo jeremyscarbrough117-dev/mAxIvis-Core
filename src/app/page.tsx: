@@ -1,0 +1,88 @@
+import React from 'react';
+import { Heart, Zap, Shield, Globe, Users, Trophy } from 'lucide-react';
+
+export default function App() {
+  const MAXIMUS_VOID = "#121212";
+  const VELVET_FURY = "#D40000";
+
+  return (
+    <main className="min-h-screen p-6 md:p-12 text-white font-sans" style={{ backgroundColor: MAXIMUS_VOID }}>
+      {/* Sovereign Header */}
+      <header className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start mb-16 gap-6">
+        <div className="animate-in fade-in slide-in-from-left duration-700">
+          <h1 className="text-4xl font-black italic tracking-tighter">mAxIvis / CORE</h1>
+          <p className="text-[10px] tracking-[0.5em] text-red-600 font-bold mt-2 uppercase">
+            IDVS Master Command
+          </p>
+          <p className="text-[8px] text-gray-500 uppercase tracking-widest mt-1 italic">
+            Architect: Ivis Daniela Vera Sanchez
+          </p>
+        </div>
+        
+        <div className="flex gap-4 animate-in fade-in slide-in-from-right duration-700">
+          <div className="p-4 rounded-2xl bg-white/5 border border-white/10 text-center min-w-[120px]">
+            <p className="text-[9px] text-gray-500 font-bold uppercase mb-1">Fleet Status</p>
+            <p className="text-xl font-black text-green-500">ACTIVE</p>
+          </div>
+          <div className="p-4 rounded-2xl bg-white/5 border border-white/10 text-center min-w-[120px]">
+            <p className="text-[9px] text-gray-500 font-bold uppercase mb-1">Scholarship Fund</p>
+            <p className="text-xl font-black text-red-600">$600.00</p>
+          </div>
+        </div>
+      </header>
+
+      {/* Main Command Grid */}
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        {/* Module 1: IDVS Brain */}
+        <section className="p-8 rounded-3xl border border-white/5 bg-zinc-900/50 backdrop-blur-xl group hover:border-red-600/50 transition-all cursor-pointer">
+          <Zap className="text-red-600 mb-6 group-hover:scale-110 transition-transform" size={32} />
+          <h2 className="text-xl font-bold mb-2 italic">Cerebro IDVS</h2>
+          <p className="text-sm text-gray-400 leading-relaxed mb-6">
+            Intelligent Dispatch & Verification System. Real-time safety auditing and field integrity monitoring.
+          </p>
+          <div className="flex justify-between items-center">
+            <span className="text-[10px] font-bold text-gray-600 uppercase tracking-widest">Master Key Required</span>
+            <Shield size={16} className="text-gray-700" />
+          </div>
+        </section>
+
+        {/* Module 2: Vera-Hire */}
+        <section className="p-8 rounded-3xl border border-white/5 bg-zinc-900/50 backdrop-blur-xl group hover:border-red-600/50 transition-all cursor-pointer">
+          <Users className="text-red-600 mb-6 group-hover:scale-110 transition-transform" size={32} />
+          <h2 className="text-xl font-bold mb-2 italic">Vera-Hire Portal</h2>
+          <p className="text-sm text-gray-400 leading-relaxed mb-6">
+            The elite talent marketplace. Connecting mAxIvis certified technicians with business owners.
+          </p>
+          <div className="flex justify-between items-center">
+            <span className="text-[10px] font-bold text-gray-600 uppercase tracking-widest">Active Search</span>
+            <Trophy size={16} className="text-gray-700" />
+          </div>
+        </section>
+
+        {/* Module 3: Ivis-Sync */}
+        <section className="p-8 rounded-3xl border border-red-600/20 bg-red-950/5 backdrop-blur-xl group hover:border-red-600/50 transition-all cursor-pointer relative overflow-hidden">
+          <Globe className="text-red-600 mb-6 animate-pulse" size={32} />
+          <h2 className="text-xl font-bold mb-2 italic">Ivis-Sync Hub</h2>
+          <p className="text-sm text-gray-400 leading-relaxed mb-6">
+            Global telemetry bridge. Managing international operations and dispatch from Venezuela.
+          </p>
+          <div className="flex justify-between items-center">
+            <span className="text-[10px] font-bold text-red-600 uppercase tracking-widest underline decoration-red-600/30">Secure Bridge Active</span>
+            <Heart size={16} className="text-red-600 fill-red-600 animate-pulse" />
+          </div>
+        </section>
+
+      </div>
+
+      {/* Footer Branding */}
+      <footer className="fixed bottom-8 left-0 w-full text-center px-4 opacity-20 pointer-events-none">
+        <div className="max-w-6xl mx-auto flex flex-col items-center gap-2">
+          <div className="h-px w-full bg-gradient-to-r from-transparent via-red-600 to-transparent mb-4"></div>
+          <p className="text-[10px] tracking-[0.8em] font-bold uppercase">mAxIvis Worldwide . 2026</p>
+          <p className="text-[8px] text-gray-500 uppercase tracking-widest italic">Sovereign Architecture by IDVS Core</p>
+        </div>
+      </footer>
+    </main>
+  );
+}
