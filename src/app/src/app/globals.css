@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Savage Color Palette */
+:root {
+  --maximus-void: #121212;
+  --velvet-fury: #D40000;
+  --phantom-silver: #E0E0E0;
+}
+
+/* Base Document Styling */
+body {
+  background-color: var(--maximus-void);
+  color: var(--phantom-silver);
+  margin: 0;
+  padding: 0;
+  /* Smooth transitions for hover effects */
+  transition: background-color 0.5s ease;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+}
+
+/* Custom Savage Animations */
+@layer utilities {
+  .animate-spin-slow {
+    animation: spin 12s linear infinite;
+  }
+  
+  .glow-red {
+    box-shadow: 0 0 15px rgba(212, 0, 0, 0.2);
+  }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Hide scrollbars for a clean "Sovereign" look but keep scrolling functional */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--maximus-void);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--velvet-fury);
+  border-radius: 10px;
+}
